@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cpewc8dnjdqcc"]
+
+[ext_resource type="Script" uid="uid://bljj8njnlju3e" path="res://scripts/player/energy_spawner.gd" id="1_wmb2s"]
+[ext_resource type="PackedScene" uid="uid://dl8nu0nu4bk8k" path="res://scenes/player/EnergyPickup.tscn" id="2_6tx0n"]
+
+[node name="EnergySpawner" type="Node2D" unique_id=83755230]
+script = ExtResource("1_wmb2s")
+energy_scene = ExtResource("2_6tx0n")
+spawn_interval = 2.0
+max_energy = 10
+
+[node name="Marker2D50" type="Marker2D" parent="." unique_id=433642730]
+position = Vector2(-840, -250)
+
+[node name="Marker2D51" type="Marker2D" parent="." unique_id=1289323108]
+position = Vector2(348, -303)
+
+[node name="Marker2D52" type="Marker2D" parent="." unique_id=1485780089]
+position = Vector2(-875, 304)
+
+[node name="Marker2D53" type="Marker2D" parent="." unique_id=1940102712]
+position = Vector2(-661, 536)
+
+[node name="Marker2D54" type="Marker2D" parent="." unique_id=1995052718]
+position = Vector2(120, 632)
+
+[node name="Marker2D55" type="Marker2D" parent="." unique_id=1518438813]
+position = Vector2(1119, -485)
+
+[node name="Marker2D56" type="Marker2D" parent="." unique_id=637466628]
+position = Vector2(908, -174)
+
+[node name="Marker2D57" type="Marker2D" parent="." unique_id=1735382486]
+position = Vector2(567, 198)
+
+[node name="Marker2D58" type="Marker2D" parent="." unique_id=1813060096]
+position = Vector2(-449, 887)
+
+[node name="Marker2D59" type="Marker2D" parent="." unique_id=1157255671]
+position = Vector2(-1791, -79)
+
+[node name="Marker2D60" type="Marker2D" parent="." unique_id=924885559]
+position = Vector2(1486, 68)
+
+[node name="Marker2D61" type="Marker2D" parent="." unique_id=642839204]
+position = Vector2(-582, -983)
+
+[node name="Marker2D62" type="Marker2D" parent="." unique_id=1737946291]
+position = Vector2(-137, 46)
+
+[node name="Marker2D63" type="Marker2D" parent="." unique_id=754633044]
+position = Vector2(-943, -816)
+
+[node name="Marker2D64" type="Marker2D" parent="." unique_id=87588115]
+position = Vector2(975, 541)
+
+[node name="Marker2D65" type="Marker2D" parent="." unique_id=2015507231]
+position = Vector2(1064, -916)
+
+[node name="Marker2D66" type="Marker2D" parent="." unique_id=466688839]
+position = Vector2(-1883, 385)
+
+[node name="Marker2D67" type="Marker2D" parent="." unique_id=457135705]
+position = Vector2(-1199, 1080)
+
+[node name="Marker2D68" type="Marker2D" parent="." unique_id=1483203704]
+position = Vector2(1382, -141)
+
+[node name="Marker2D69" type="Marker2D" parent="." unique_id=1784995799]
+position = Vector2(-283, -909)
+
+[node name="Marker2D70" type="Marker2D" parent="." unique_id=717284970]
+position = Vector2(-480, 27)
+
+[node name="Marker2D71" type="Marker2D" parent="." unique_id=1263921756]
+position = Vector2(-313, 549)
+
+[node name="Marker2D72" type="Marker2D" parent="." unique_id=2107462171]
+position = Vector2(-1367, 86)

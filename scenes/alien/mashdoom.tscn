@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://clhmrpo0yg23"]
+
+[ext_resource type="Texture2D" uid="uid://cnarvacyce12y" path="res://assets/images/Uncle rum.png" id="1_m8s1g"]
+[ext_resource type="Script" uid="uid://ctgcc5oa4eggh" path="res://scripts/NPC/npc.gd" id="1_y5gvr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y5gvr"]
+radius = 34.0
+height = 70.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2v0ox"]
+radius = 89.005615
+
+[node name="Mashdoom" type="CharacterBody2D" unique_id=1815761454]
+script = ExtResource("1_y5gvr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1199503629]
+texture = ExtResource("1_m8s1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=701515873]
+shape = SubResource("CapsuleShape2D_y5gvr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1207019004]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=271949440]
+shape = SubResource("CircleShape2D_2v0ox")
+
+[node name="Label" type="Label" parent="." unique_id=130636720]
+offset_left = -66.0
+offset_top = -66.0
+offset_right = 77.0
+offset_bottom = -43.0
+text = "Press E To Interact"

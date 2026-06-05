@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://36pt1gqnkrrf"]
+
+[ext_resource type="Script" uid="uid://cir46dv18r72g" path="res://scenes/enemy/enemy-human.gd" id="1_i3nfm"]
+[ext_resource type="Texture2D" uid="uid://bf25cc57od80m" path="res://scenes/enemy-human.svg" id="2_i3nfm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3nfm"]
+radius = 29.5
+height = 201.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0x7br"]
+radius = 46.0
+height = 136.0
+
+[node name="Enemy-human" type="CharacterBody2D" unique_id=47528080]
+script = ExtResource("1_i3nfm")
+speed = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055287291]
+texture = ExtResource("2_i3nfm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1271997143]
+position = Vector2(-1.5, 1.5)
+shape = SubResource("CapsuleShape2D_i3nfm")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=990857654]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=799938184]
+position = Vector2(1, 40)
+shape = SubResource("CapsuleShape2D_0x7br")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=54431917]
+
+[connection signal="body_entered" from="DamageArea" to="." method="_on_damage_area_body_entered"]

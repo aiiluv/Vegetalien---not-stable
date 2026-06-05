@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cqweitjobn7wo"]
+
+[ext_resource type="Script" uid="uid://r6rgll8b1dfx" path="res://scripts/enemy/elepant.gd" id="1_bfi7q"]
+[ext_resource type="Texture2D" uid="uid://dv2lnxebwu04q" path="res://assets/images/enemy elephant.svg" id="1_r6ib5"]
+[ext_resource type="Texture2D" uid="uid://bbf7rkfxrxsku" path="res://assets/images/ui/healthunder.svg" id="3_s3ill"]
+[ext_resource type="Texture2D" uid="uid://b8qsj5igepxwb" path="res://assets/images/ui/healthred.svg" id="4_f2fnk"]
+
+[sub_resource type="Theme" id="Theme_ktbxn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bfi7q"]
+radius = 116.0
+height = 236.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2ygs"]
+radius = 309.10355
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bfi7q"]
+radius = 125.67418
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s3ill"]
+radius = 122.06556
+
+[node name="Elepant" type="CharacterBody2D" unique_id=1932078070]
+z_index = 20
+script = ExtResource("1_bfi7q")
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1420240788]
+offset_left = -75.0
+offset_top = -139.0
+offset_right = 450.0
+offset_bottom = -56.0
+scale = Vector2(0.28000066, 0.28000066)
+theme = SubResource("Theme_ktbxn")
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("3_s3ill")
+texture_progress = ExtResource("4_f2fnk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=955136929]
+texture = ExtResource("1_r6ib5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=659511545]
+shape = SubResource("CapsuleShape2D_bfi7q")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1159721835]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=950257928]
+shape = SubResource("CircleShape2D_u2ygs")
+
+[node name="Label" type="Label" parent="." unique_id=791171684]
+offset_left = -66.0
+offset_top = -66.0
+offset_right = 77.0
+offset_bottom = -43.0
+text = "Press E To Interact"
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=309786763]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=706234496]
+shape = SubResource("CircleShape2D_bfi7q")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1082870841]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=309521234]
+shape = SubResource("CircleShape2D_s3ill")

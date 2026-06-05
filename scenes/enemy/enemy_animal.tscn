@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b3h4ybu0ex873"]
+
+[ext_resource type="Script" uid="uid://dx06m3fm2xuac" path="res://scenes/enemy/enemy_animal.gd" id="1_afss8"]
+[ext_resource type="Texture2D" uid="uid://bt2jhpu0m6bph" path="res://scenes/enemy hedgedog.png" id="1_ub682"]
+[ext_resource type="Texture2D" uid="uid://bbf7rkfxrxsku" path="res://assets/images/ui/healthunder.svg" id="3_vp2ca"]
+[ext_resource type="Texture2D" uid="uid://b8qsj5igepxwb" path="res://assets/images/ui/healthred.svg" id="4_iksma"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2gcaf"]
+radius = 45.3982
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_31n5c"]
+radius = 58.00862
+
+[sub_resource type="Theme" id="Theme_3g31l"]
+
+[node name="EnemyAnimal" type="CharacterBody2D" unique_id=1683085109]
+z_index = 10
+collision_layer = 5
+script = ExtResource("1_afss8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=662989510]
+texture = ExtResource("1_ub682")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1586615551]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_2gcaf")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1149456797]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=380371492]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_31n5c")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1869665163]
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=374663564]
+offset_left = -54.0
+offset_top = -78.0
+offset_right = 471.0
+offset_bottom = 5.0
+scale = Vector2(0.20000035, 0.20000035)
+theme = SubResource("Theme_3g31l")
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("3_vp2ca")
+texture_progress = ExtResource("4_iksma")

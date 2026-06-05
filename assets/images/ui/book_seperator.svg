@@ -1,0 +1,10 @@
+<svg width="131" height="474" viewBox="0 0 131 474" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="book_seperator_inner" data-figma-trr="l4u1.5-0f">
+<circle cx="17.2842" cy="76.532" r="17.2842" fill="#EEA851"/>
+<circle cx="113.401" cy="76.532" r="17.2842" fill="#EEA851"/>
+<path d="M17.8459 68.8604C17.8459 -11.1644 114.185 -10.2323 114.185 70.0281" stroke="#A66616" stroke-width="18.6693" stroke-linecap="round"/>
+</g>
+<use xlink:href="#book_seperator_inner" transform="translate(0 126.722)"/>
+<use xlink:href="#book_seperator_inner" transform="translate(0 253.444)"/>
+<use xlink:href="#book_seperator_inner" transform="translate(0 380.166)"/>
+</svg>

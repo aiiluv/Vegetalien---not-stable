@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfhthmfktl17j"]
+
+[ext_resource type="FontFile" uid="uid://bupgaokqo766v" path="res://assets/fonts/Grow Year.otf" id="1_v88o1"]
+[ext_resource type="Texture2D" uid="uid://b6oshunrrfeur" path="res://assets/images/ui/filling.svg" id="2_4t8ad"]
+[ext_resource type="Texture2D" uid="uid://dxo6qeup14pee" path="res://assets/images/ui/stamina.svg" id="2_tx12h"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StaminaBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 45.0
+offset_right = 604.0
+offset_bottom = 141.0
+scale = Vector2(0.5, 0.5)
+texture_under = ExtResource("2_tx12h")
+texture_progress = ExtResource("2_4t8ad")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 45.0
+offset_right = 604.0
+offset_bottom = 141.0
+scale = Vector2(0.5, 0.5)
+texture_under = ExtResource("2_tx12h")
+texture_progress = ExtResource("2_4t8ad")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_v88o1")
+theme_override_font_sizes/font_size = 30
+text = "Stamina"

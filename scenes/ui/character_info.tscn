@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://w21prpx3qnu0"]
+
+[ext_resource type="FontFile" uid="uid://dawt34xdwomdt" path="res://assets/fonts/Grow Year.otf" id="1_8nvc3"]
+[ext_resource type="Script" path="res://scenes/ui/character_info.gd" id="1_phx33"]
+[ext_resource type="StyleBox" uid="uid://173lyfo68u12" path="res://dialog/button.tres" id="2_v3mvf"]
+[ext_resource type="Texture2D" uid="uid://v56jnfaeq8yy" path="res://scenes/ui/book_charinfo.png" id="3_v3mvf"]
+[ext_resource type="StyleBox" uid="uid://dhmsdojmu12nu" path="res://scenes/ui/button.tres" id="4_ytbx4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phx33"]
+bg_color = Color(0.24313726, 0.7411765, 0.4627451, 1)
+
+[node name="Character Info" type="Control" unique_id=388265820]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_phx33")
+
+[node name="Background" type="Panel" parent="." unique_id=1182141102]
+layout_mode = 0
+offset_right = 1163.0
+offset_bottom = 662.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_phx33")
+
+[node name="Button" type="Button" parent="Background" unique_id=391226625]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 38.0
+offset_right = 238.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.5647059, 0.38431373, 0.3647059, 1)
+theme_override_fonts/font = ExtResource("1_8nvc3")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_v3mvf")
+theme_override_styles/pressed = ExtResource("4_ytbx4")
+theme_override_styles/hover = ExtResource("4_ytbx4")
+text = "Back"
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1181310956]
+position = Vector2(583, 381.00003)
+scale = Vector2(0.6986863, 0.69868636)
+texture = ExtResource("3_v3mvf")
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

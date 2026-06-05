@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bwpwjsk8krkwm"]
+
+[ext_resource type="Texture2D" uid="uid://q6v5nksxnkrb" path="res://assets/map_forest/Tree-variant1.svg" id="1_3lid0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4vtia"]
+radius = 186.02419
+
+[node name="tree-variant1" type="StaticBody2D" unique_id=1675398838]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1532618222]
+texture = ExtResource("1_3lid0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=271075656]
+shape = SubResource("CircleShape2D_4vtia")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1494297143]
+position = Vector2(235.5, 97)
+texture = ExtResource("1_3lid0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=447742074]
+position = Vector2(235.5, 97)
+shape = SubResource("CircleShape2D_4vtia")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1685584105]
+position = Vector2(-53.5, 215)
+rotation = -0.06850655
+texture = ExtResource("1_3lid0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1276434686]
+position = Vector2(-53.5, 215)
+shape = SubResource("CircleShape2D_4vtia")

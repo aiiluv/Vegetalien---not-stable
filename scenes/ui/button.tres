@@ -1,0 +1,15 @@
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://dhmsdojmu12nu"]
+
+[resource]
+bg_color = Color(0.9098039, 0.8117647, 0.6509804, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.7137255, 0.5372549, 0.38431373, 1)
+expand_margin_left = 65.0
+expand_margin_top = 10.0
+expand_margin_right = 65.0
+expand_margin_bottom = 10.0
+shadow_color = Color(0.46907842, 0.27053303, 3.85046e-07, 0.6)
+shadow_offset = Vector2(10, 10)

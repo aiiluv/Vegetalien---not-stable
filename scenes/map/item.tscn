@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d2d3258r85v88"]
+
+[ext_resource type="Script" uid="uid://btoji5ali5ydh" path="res://scripts/map/item_pohon.gd" id="1_bwsgg"]
+[ext_resource type="Texture2D" uid="uid://bcolw20d6kvxs" path="res://assets/images/diamond.svg" id="1_m2bo2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bwsgg"]
+radius = 121.0661
+
+[node name="Item" type="Area2D" unique_id=1240544476]
+z_index = 20
+script = ExtResource("1_bwsgg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179147437]
+texture = ExtResource("1_m2bo2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=707451714]
+shape = SubResource("CircleShape2D_bwsgg")

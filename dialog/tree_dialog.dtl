@@ -1,0 +1,9 @@
+tomato: OH this is the tree!
+tomato: hmm I need to collect the shape that matches that shape on the tree
+tomato: I remember he said that each corner of this map!
+tomato: so I need to collect 4 pieces
+tomato: Then I need to come back again!
+[signal arg="start_pemukiman_mission"]
+[wait time="2.0"]
+tomato: OH NO! THERE IS HUMAN, I NEED TO BE FAST
+return

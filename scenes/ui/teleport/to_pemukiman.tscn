@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cvnd5o66dm4fk"]
+
+[ext_resource type="Script" uid="uid://cpugixdrdfury" path="res://scripts/map/go-pemukiman.gd" id="1_8n5b5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wfo2"]
+size = Vector2(340, 54)
+
+[node name="To Pemukiman" type="Area2D" unique_id=1779487322]
+script = ExtResource("1_8n5b5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1267425464]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_5wfo2")

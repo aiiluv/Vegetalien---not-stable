@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bvutpj121blpc"]
+
+[ext_resource type="Script" uid="uid://bxmi6y4blgx27" path="res://scripts/map/pohon.gd" id="1_3qpf1"]
+[ext_resource type="Texture2D" uid="uid://cxjr43hrcp6yd" path="res://assets/images/pohon.svg" id="1_g8wgh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8wgh"]
+size = Vector2(330, 412)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g8wgh"]
+radius = 451.1596
+
+[node name="Pohon" type="StaticBody2D" unique_id=361298578]
+script = ExtResource("1_3qpf1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2121775740]
+scale = Vector2(0.52000034, 0.52000034)
+texture = ExtResource("1_g8wgh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=894349051]
+position = Vector2(9, 152)
+shape = SubResource("RectangleShape2D_g8wgh")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2092443126]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=371870746]
+shape = SubResource("CircleShape2D_g8wgh")
+
+[node name="Label" type="Label" parent="." unique_id=708025837]
+offset_left = -113.0
+offset_top = 367.0
+offset_right = 123.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 40
+text = "E to Interact"

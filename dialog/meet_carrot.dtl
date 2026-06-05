@@ -1,0 +1,17 @@
+carrot: hola
+tomato: what are you?
+carrot: were the same species right now..... (a vegetable)
+tomato: uhhhhhhhh
+carrot: anyway, there's a rumor
+carrot: there is a Safe Zone in Pemukiman!
+carrot: everyone is safe there
+tomato: how do I trust you tho
+carrot: WE ARE ALIENS, ARE YOU FORGOT
+carrot: I'M FIGHTING THOSE GUYS (Animals) TOO
+tomato: Alright............... Let's go...........
+carrot: ..........
+carrot: Here's a map, I need to do something first carefull on the way
+tomato: I thought we're going together.....
+carrot: OK, i'll follow you
+[signal arg="follow_carrot"]
+return

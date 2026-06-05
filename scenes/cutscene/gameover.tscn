@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://ue00xmtlf3vf"]
+
+[ext_resource type="Texture2D" uid="uid://bprhgmsauxaep" path="res://assets/images/ui/menu screen.png" id="1_jjs7q"]
+[ext_resource type="Script" uid="uid://du05q0lnxd8gq" path="res://scripts/map/gameover.gd" id="1_x2xsn"]
+[ext_resource type="FontFile" uid="uid://dawt34xdwomdt" path="res://assets/fonts/Grow Year.otf" id="2_x2xsn"]
+[ext_resource type="StyleBox" uid="uid://dhmsdojmu12nu" path="res://scenes/ui/button.tres" id="3_yc6jr"]
+
+[node name="Gameover" type="Control" unique_id=2049980996]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x2xsn")
+
+[node name="MenuScreen" type="Sprite2D" parent="." unique_id=150132745]
+position = Vector2(1021.541, 1.2500229)
+scale = Vector2(1.4214741, 1.4214743)
+texture = ExtResource("1_jjs7q")
+
+[node name="Button" type="Button" parent="." unique_id=207853187]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46400002
+anchor_top = 0.51900005
+anchor_right = 0.46400002
+anchor_bottom = 0.51900005
+offset_left = -101.528015
+offset_top = -17.312042
+offset_right = 104.471985
+offset_bottom = 38.687958
+theme_override_fonts/font = ExtResource("2_x2xsn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_yc6jr")
+theme_override_styles/pressed = ExtResource("3_yc6jr")
+theme_override_styles/hover = ExtResource("3_yc6jr")
+text = "Menu Screen"
+
+[node name="Label" type="Label" parent="." unique_id=1016144317]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 214.0
+offset_right = 729.0
+offset_bottom = 297.0
+theme_override_fonts/font = ExtResource("2_x2xsn")
+theme_override_font_sizes/font_size = 70
+text = "GAMEOVER"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

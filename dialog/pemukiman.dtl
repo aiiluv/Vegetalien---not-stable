@@ -1,0 +1,5 @@
+tomato: (WHAT)
+tomato: (i need to go to pemukiman)
+narrator: Go to the path
+[signal arg="pemukiman_open"]
+return

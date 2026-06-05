@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dd63hxsp5c3v5"]
+
+[ext_resource type="Script" uid="uid://mvgll4j0ubv7" path="res://scenes/cutscene/backstory.gd" id="1_qikl4"]
+[ext_resource type="VideoStream" uid="uid://lcwvh7oys6ny" path="res://scenes/cutscene/Vegetalien-_-backstory(fix).ogv" id="2_doxpf"]
+
+[node name="Backstory" type="Control" unique_id=789869431]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qikl4")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1265855454]
+texture_filter = 3
+layout_mode = 0
+offset_left = 71.0
+offset_top = 1.0
+offset_right = 1084.0
+offset_bottom = 637.0
+stream = ExtResource("2_doxpf")
+expand = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1324044592]
+position = Vector2(573, 323)
+
+[node name="Button" type="Button" parent="." unique_id=1101873585]
+layout_mode = 0
+offset_left = 961.0
+offset_top = 590.0
+offset_right = 1131.0
+offset_bottom = 633.0
+text = "Skip button"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,731 @@
+[gd_scene format=3 uid="uid://l4yk4662vhg1"]
+
+[ext_resource type="Script" uid="uid://bvc80lo2chehx" path="res://scripts/player/health.gd" id="1_2wyq8"]
+[ext_resource type="Texture2D" uid="uid://cdoixdvxfaaj8" path="res://assets/map_forest/Map_Hutan_gundul.svg" id="1_choun"]
+[ext_resource type="Texture2D" uid="uid://q8iwmobbpy0v" path="res://assets/images/blank.png" id="1_trceg"]
+[ext_resource type="PackedScene" uid="uid://cwa73ox237egm" path="res://scenes/player/player.tscn" id="2_0wfyh"]
+[ext_resource type="AudioStream" uid="uid://2qrul58pqe7j" path="res://sound/shoot.mp3" id="2_2cjbq"]
+[ext_resource type="Texture2D" uid="uid://cewu1g052atw0" path="res://assets/map_pemukiman/pool.png" id="2_dp3eg"]
+[ext_resource type="Texture2D" uid="uid://51fx0hgvng6v" path="res://assets/images/ui/stamina.svg" id="2_y6deb"]
+[ext_resource type="PackedScene" uid="uid://bwpwjsk8krkwm" path="res://scenes/level/tree_variant_1.tscn" id="2_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://dgnuusu06sn2m" path="res://assets/map_forest/Tree-variant1.svg" id="3_0ld40"]
+[ext_resource type="AudioStream" uid="uid://b2ui3nvbwsh8n" path="res://sound/getAttack.mp3" id="3_chjal"]
+[ext_resource type="PackedScene" uid="uid://dddlwweo8ynsy" path="res://scenes/level/tree_variant_2.tscn" id="3_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://tjooc3axij2b" path="res://assets/images/ui/filling.svg" id="3_og1vs"]
+[ext_resource type="PackedScene" uid="uid://36pt1gqnkrrf" path="res://scenes/enemy/enemy_human.tscn" id="3_sugp2"]
+[ext_resource type="AudioStream" uid="uid://cfipbfs53g2sm" path="res://sound/energy.wav" id="4_cjqg0"]
+[ext_resource type="Texture2D" uid="uid://dab8r638cf1xc" path="res://assets/map_forest/tree-variant2.svg" id="4_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://38jnj3415fyp" path="res://scenes/enemy/enemy_human_2.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://2q2g5hgx4of1" path="res://scenes/level/tree_single.tscn" id="4_trceg"]
+[ext_resource type="PackedScene" uid="uid://dintogilorvpb" path="res://scenes/level/pool.tscn" id="5_a8y0u"]
+[ext_resource type="AudioStream" uid="uid://d2ptx4a050vm7" path="res://sound/footstep.mp3" id="5_vchkt"]
+[ext_resource type="Texture2D" uid="uid://dvhrx4dyk6nuo" path="res://assets/map_pemukiman/jalan.png" id="5_yc10j"]
+[ext_resource type="Texture2D" uid="uid://dqxsko2lrhhj1" path="res://assets/map_forest/single-tree.svg" id="6_jscy8"]
+[ext_resource type="PackedScene" uid="uid://ixnxiklpirmq" path="res://scenes/level/border.tscn" id="6_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://dcc2p6fnkwwdu" path="res://assets/map_pemukiman/Rumah (4).svg" id="7_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://co2iyd3a31xt3" path="res://assets/map_pemukiman/Rumah.svg" id="8_yc10j"]
+[ext_resource type="PackedScene" uid="uid://cvnd5o66dm4fk" path="res://scenes/ui/teleport/to_pemukiman.tscn" id="11_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://bkep6t43tlq3a" path="res://scenes/map/pemukiman.tscn" id="12_eb6dy"]
+[ext_resource type="Script" uid="uid://dh4ru2l8yw7fv" path="res://scripts/NPC/carrot.gd" id="22_yq6so"]
+[ext_resource type="PackedScene" uid="uid://kc2yv0wj8x8u" path="res://scenes/player/bullet.tscn" id="23_chjal"]
+[ext_resource type="PackedScene" uid="uid://cpewc8dnjdqcc" path="res://scenes/player/energy_spawner.tscn" id="23_y6deb"]
+[ext_resource type="Texture2D" uid="uid://cghgri2lpuyyj" path="res://assets/images/ui/newHear.svg" id="24_2wyq8"]
+[ext_resource type="FontFile" uid="uid://b3htss0jsfr0r" path="res://assets/fonts/Grow Year.otf" id="26_2wyq8"]
+[ext_resource type="Script" uid="uid://cyea1k5d7cgr6" path="res://scripts/GameManager.gd" id="27_vxglm"]
+[ext_resource type="PackedScene" uid="uid://dl8nu0nu4bk8k" path="res://scenes/player/EnergyPickup.tscn" id="28_2f3dj"]
+[ext_resource type="PackedScene" uid="uid://ban58m5ccn2xo" path="res://scenes/alien/carrot.tscn" id="29_yq6so"]
+[ext_resource type="PackedScene" uid="uid://cqweitjobn7wo" path="res://scenes/enemy/elepant.tscn" id="30_fv21b"]
+[ext_resource type="Script" uid="uid://xx1o4anum36k" path="res://scenes/ui/map.gd" id="31_c6pm6"]
+[ext_resource type="PackedScene" uid="uid://b3h4ybu0ex873" path="res://scenes/enemy/enemy_animal.tscn" id="31_if84o"]
+[ext_resource type="Texture2D" uid="uid://b8qiavvof3p87" path="res://assets/images/Map.png" id="31_pibwh"]
+[ext_resource type="PackedScene" uid="uid://b2eqrhboscnrf" path="res://scenes/enemy_animal_2.tscn" id="32_k4hdi"]
+[ext_resource type="PackedScene" uid="uid://clhmrpo0yg23" path="res://scenes/alien/mashdoom.tscn" id="34_fuf3a"]
+[ext_resource type="PackedScene" uid="uid://codnh8qcqjqfk" path="res://scenes/enemy/elepant_spawner.tscn" id="35_j8jky"]
+[ext_resource type="PackedScene" uid="uid://bvutpj121blpc" path="res://scenes/map/pohon_main.tscn" id="37_fuf3a"]
+[ext_resource type="PackedScene" uid="uid://d2d3258r85v88" path="res://scenes/map/item.tscn" id="37_pibwh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_85g3d"]
+radius = 320.006
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_jscy8"]
+
+[node name="Main" type="Node2D" unique_id=155292140]
+
+[node name="GameManager" type="Node2D" parent="." unique_id=1928807507]
+script = ExtResource("27_vxglm")
+
+[node name="SFX" type="Node" parent="GameManager" unique_id=180188536]
+
+[node name="Shoot" type="AudioStreamPlayer" parent="GameManager/SFX" unique_id=1251372301]
+stream = ExtResource("2_2cjbq")
+bus = &"SFX"
+
+[node name="Hurt" type="AudioStreamPlayer" parent="GameManager/SFX" unique_id=1222426631]
+stream = ExtResource("3_chjal")
+bus = &"SFX"
+
+[node name="Energy" type="AudioStreamPlayer" parent="GameManager/SFX" unique_id=1295151841]
+stream = ExtResource("4_cjqg0")
+bus = &"SFX"
+
+[node name="Walk" type="AudioStreamPlayer" parent="GameManager/SFX" unique_id=1745683051]
+stream = ExtResource("5_vchkt")
+bus = &"SFX"
+
+[node name="Map" type="Node" parent="." unique_id=946234670]
+
+[node name="Blank" type="Sprite2D" parent="Map" unique_id=1963184977]
+position = Vector2(5353, 3022)
+scale = Vector2(29.8227, 28.4327)
+texture = ExtResource("1_trceg")
+metadata/_edit_lock_ = true
+
+[node name="Pool" type="Sprite2D" parent="Map/Blank" unique_id=360421935]
+position = Vector2(-7.77933, -18.6053)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("2_dp3eg")
+
+[node name="Pool2" type="Sprite2D" parent="Map/Blank" unique_id=1842655467]
+position = Vector2(97.4259, -21.9993)
+scale = Vector2(0.024554, 0.054115)
+texture = ExtResource("2_dp3eg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Blank" unique_id=1100501829]
+position = Vector2(55.1929, -24.3734)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Jalan2" type="Sprite2D" parent="Map/Blank" unique_id=989104328]
+position = Vector2(-50.8003, 42.2401)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("5_yc10j")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Map/Blank" unique_id=1459377900]
+position = Vector2(55.1929, -24.3734)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Map/Blank" unique_id=1015610460]
+position = Vector2(-45.3347, 57.7504)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Map/Blank" unique_id=1365018639]
+position = Vector2(-35.1746, 96.1569)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Map/Blank" unique_id=1159038481]
+position = Vector2(-16.0616, 100.166)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="TreeVariant2" type="Sprite2D" parent="Map/Blank" unique_id=662543209]
+position = Vector2(68.8067, -22.1224)
+scale = Vector2(0.0639996, 0.0671283)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant1" type="Sprite2D" parent="Map/Blank" unique_id=1404533484]
+position = Vector2(128.761, 5.06459)
+scale = Vector2(0.0571259, 0.0599186)
+texture = ExtResource("3_0ld40")
+
+[node name="TreeVariant3" type="Sprite2D" parent="Map/Blank" unique_id=970170861]
+position = Vector2(126.95, 26.8353)
+scale = Vector2(0.0571259, 0.0599186)
+texture = ExtResource("3_0ld40")
+
+[node name="Jalan" type="Sprite2D" parent="Map/Blank" unique_id=1570171810]
+position = Vector2(135.166, 40.974)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("5_yc10j")
+
+[node name="Jalan3" type="Sprite2D" parent="Map/Blank" unique_id=1665265625]
+position = Vector2(30.6143, 102.875)
+rotation = 1.56671
+scale = Vector2(0.0335316, 0.0295675)
+texture = ExtResource("5_yc10j")
+
+[node name="Jalan4" type="Sprite2D" parent="Map/Blank" unique_id=13790692]
+position = Vector2(30.2454, -22.4741)
+rotation = 1.56671
+scale = Vector2(0.0335316, 0.0295675)
+texture = ExtResource("5_yc10j")
+
+[node name="SingleTree" type="Sprite2D" parent="Map/Blank" unique_id=597310417]
+position = Vector2(111.995, 11.747)
+scale = Vector2(0.0712084, 0.0663839)
+texture = ExtResource("6_jscy8")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Map/Blank" unique_id=612616947]
+position = Vector2(48.3189, -45.2296)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Map/Blank" unique_id=471590571]
+position = Vector2(129.432, 42.0643)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Map/Blank" unique_id=1934070714]
+position = Vector2(125.609, 62.1116)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Map/Blank" unique_id=780127698]
+position = Vector2(125.609, 62.1116)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Map/Blank" unique_id=648755061]
+position = Vector2(125.609, 62.1116)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Map/Blank" unique_id=1636933105]
+position = Vector2(104.216, 99.9202)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Map/Blank" unique_id=1362616892]
+position = Vector2(125.877, 92.9916)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Map/Blank" unique_id=224538641]
+position = Vector2(2.7831, 101.608)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Map/Blank" unique_id=575993495]
+position = Vector2(21.6278, 102.452)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Pool3" type="Sprite2D" parent="Map/Blank" unique_id=1503931024]
+position = Vector2(69.5444, 93.4488)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("2_dp3eg")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Map/Blank" unique_id=261970961]
+position = Vector2(42.3839, 99.6037)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Rumah(4)" type="Sprite2D" parent="Map/Blank" unique_id=993166028]
+position = Vector2(-32.0562, 63.3426)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("7_gqmmt")
+
+[node name="Rumah" type="Sprite2D" parent="Map/Blank" unique_id=1982847973]
+position = Vector2(109.615, 68.161)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("8_yc10j")
+
+[node name="TreeVariant4" type="Sprite2D" parent="Map/Blank" unique_id=2084476789]
+position = Vector2(-26.4229, -46.4254)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("3_0ld40")
+
+[node name="TreeVariant25" type="Sprite2D" parent="Map/Blank" unique_id=833818241]
+position = Vector2(-18.1071, -68.1962)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("3_0ld40")
+
+[node name="TreeVariant8" type="Sprite2D" parent="Map/Blank" unique_id=1109423094]
+position = Vector2(-22.6003, -58.7)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("3_0ld40")
+
+[node name="TreeVariant5" type="Sprite2D" parent="Map/Blank" unique_id=232509563]
+position = Vector2(-26.7582, -34.0453)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("3_0ld40")
+
+[node name="TreeVariant7" type="Sprite2D" parent="Map/Blank" unique_id=756960651]
+position = Vector2(-27.5629, -85.2892)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("3_0ld40")
+
+[node name="TreeVariant6" type="Sprite2D" parent="Map/Blank" unique_id=1589016061]
+position = Vector2(-27.6971, -71.8539)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("3_0ld40")
+
+[node name="TreeVariant9" type="Sprite2D" parent="Map/Blank" unique_id=271353584]
+position = Vector2(-53.8852, -111.702)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant18" type="Sprite2D" parent="Map/Blank" unique_id=699359854]
+position = Vector2(-166.484, -5.97903)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant19" type="Sprite2D" parent="Map/Blank" unique_id=1077718209]
+position = Vector2(-155.788, -5.34596)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant20" type="Sprite2D" parent="Map/Blank" unique_id=1300539039]
+position = Vector2(-144.655, -5.34596)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant21" type="Sprite2D" parent="Map/Blank" unique_id=1406087717]
+position = Vector2(-132.852, -5.48664)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant22" type="Sprite2D" parent="Map/Blank" unique_id=85016509]
+position = Vector2(-107.167, -4.25566)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant23" type="Sprite2D" parent="Map/Blank" unique_id=825771004]
+position = Vector2(-94.2572, -3.4819)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant24" type="Sprite2D" parent="Map/Blank" unique_id=424426115]
+position = Vector2(-57.5401, -3.7281)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant10" type="Sprite2D" parent="Map/Blank" unique_id=886137913]
+position = Vector2(-64.2465, -111.351)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant11" type="Sprite2D" parent="Map/Blank" unique_id=1212336648]
+position = Vector2(-81.4817, -111.562)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant12" type="Sprite2D" parent="Map/Blank" unique_id=723919912]
+position = Vector2(-126.146, -112.722)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant26" type="Sprite2D" parent="Map/Blank" unique_id=499302982]
+position = Vector2(-104.518, -112.019)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant27" type="Sprite2D" parent="Map/Blank" unique_id=1638638795]
+position = Vector2(-93.0501, -111.527)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant28" type="Sprite2D" parent="Map/Blank" unique_id=629774872]
+position = Vector2(-115.248, -113.25)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant13" type="Sprite2D" parent="Map/Blank" unique_id=1458358154]
+position = Vector2(-136.205, -113.461)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant30" type="Sprite2D" parent="Map/Blank" unique_id=623511939]
+position = Vector2(-146.6, -112.318)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant31" type="Sprite2D" parent="Map/Blank" unique_id=1247052146]
+position = Vector2(-157.33, -113.549)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant14" type="Sprite2D" parent="Map/Blank" unique_id=1018307120]
+position = Vector2(-186.972, -81.7369)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant15" type="Sprite2D" parent="Map/Blank" unique_id=768668316]
+position = Vector2(-188.783, -73.929)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant29" type="Sprite2D" parent="Map/Blank" unique_id=1433221440]
+position = Vector2(-190.325, -64.7494)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant33" type="Sprite2D" parent="Map/Blank" unique_id=376231541]
+position = Vector2(-190.794, -57.0118)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant32" type="Sprite2D" parent="Map/Blank" unique_id=43402024]
+position = Vector2(-188.112, -49.4325)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant16" type="Sprite2D" parent="Map/Blank" unique_id=297823924]
+position = Vector2(-187.408, -41.0443)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant17" type="Sprite2D" parent="Map/Blank" unique_id=410755718]
+position = Vector2(-187.643, -32.2868)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant34" type="Sprite2D" parent="Map/Blank" unique_id=146729688]
+position = Vector2(-186.905, -16.4599)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="TreeVariant35" type="Sprite2D" parent="Map/Blank" unique_id=79563170]
+position = Vector2(-185.597, -8.82787)
+scale = Vector2(0.0335316, 0.0351708)
+texture = ExtResource("4_gqmmt")
+
+[node name="Jalan5" type="Sprite2D" parent="Map/Blank" unique_id=602892789]
+position = Vector2(-118.165, -5.76801)
+rotation = -1.57012
+scale = Vector2(0.03138, 0.0299174)
+skew = 6.75917e-05
+texture = ExtResource("5_yc10j")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Map/Blank" unique_id=1894130666]
+position = Vector2(-44.9994, 80.4004)
+scale = Vector2(0.0642937, 0.0642937)
+texture = ExtResource("3_0ld40")
+
+[node name="Pemukiman" parent="Map" unique_id=1553306460 instance=ExtResource("12_eb6dy")]
+position = Vector2(6598, 4084)
+metadata/_edit_lock_ = true
+
+[node name="MapHutan" type="Sprite2D" parent="Map" unique_id=468231920]
+position = Vector2(2158, 1352)
+texture = ExtResource("1_choun")
+metadata/_edit_lock_ = true
+
+[node name="Trees" type="Node" parent="Map/MapHutan" unique_id=1134966623]
+
+[node name="tree-variant1" parent="Map/MapHutan/Trees" unique_id=1336248354 instance=ExtResource("2_ya4ey")]
+position = Vector2(1975, 76)
+
+[node name="tree-variant5" parent="Map/MapHutan/Trees" unique_id=541934532 instance=ExtResource("2_ya4ey")]
+position = Vector2(53, 155)
+
+[node name="tree-variant6" parent="Map/MapHutan/Trees" unique_id=704798081 instance=ExtResource("2_ya4ey")]
+position = Vector2(45, 1066)
+
+[node name="tree-variant7" parent="Map/MapHutan/Trees" unique_id=566962143 instance=ExtResource("2_ya4ey")]
+position = Vector2(174, 1488)
+
+[node name="tree-variant2" parent="Map/MapHutan/Trees" unique_id=1602370614 instance=ExtResource("2_ya4ey")]
+position = Vector2(2496, 110)
+
+[node name="tree-variant3" parent="Map/MapHutan/Trees" unique_id=1973878884 instance=ExtResource("3_eb6dy")]
+position = Vector2(1053, 74)
+
+[node name="tree-variant8" parent="Map/MapHutan/Trees" unique_id=1408437976 instance=ExtResource("3_eb6dy")]
+position = Vector2(63, 2307)
+
+[node name="tree-variant9" parent="Map/MapHutan/Trees" unique_id=908608795 instance=ExtResource("3_eb6dy")]
+position = Vector2(201, 2499)
+
+[node name="tree-variant4" parent="Map/MapHutan/Trees" unique_id=1914971532 instance=ExtResource("3_eb6dy")]
+position = Vector2(3221, 51)
+
+[node name="tree-variant10" parent="Map/MapHutan/Trees" unique_id=1896068480 instance=ExtResource("2_ya4ey")]
+position = Vector2(1839, 1961)
+
+[node name="tree-variant14" parent="Map/MapHutan/Trees" unique_id=1756649670 instance=ExtResource("2_ya4ey")]
+position = Vector2(4078, 2483)
+
+[node name="tree-variant11" parent="Map/MapHutan/Trees" unique_id=1598388722 instance=ExtResource("3_eb6dy")]
+position = Vector2(2357, 1948)
+
+[node name="tree-variant12" parent="Map/MapHutan/Trees" unique_id=1364279369 instance=ExtResource("3_eb6dy")]
+position = Vector2(2269, 2207)
+
+[node name="tree-variant13" parent="Map/MapHutan/Trees" unique_id=2134452880 instance=ExtResource("3_eb6dy")]
+position = Vector2(2586, 2169)
+
+[node name="tree-single" parent="Map/MapHutan/Trees" unique_id=285323993 instance=ExtResource("4_trceg")]
+position = Vector2(4249, 2307)
+
+[node name="tree-variant15" parent="Map/MapHutan/Trees" unique_id=365254363 instance=ExtResource("2_ya4ey")]
+position = Vector2(4099, 1213)
+
+[node name="tree-variant16" parent="Map/MapHutan/Trees" unique_id=22241540 instance=ExtResource("3_eb6dy")]
+position = Vector2(4199, 1618)
+
+[node name="tree-single2" parent="Map/MapHutan/Trees" unique_id=1485543194 instance=ExtResource("4_trceg")]
+position = Vector2(4253, 987)
+
+[node name="tree-variant18" parent="Map/MapHutan/Trees" unique_id=86283738 instance=ExtResource("2_ya4ey")]
+position = Vector2(4031, 77)
+
+[node name="tree-variant17" parent="Map/MapHutan/Trees" unique_id=1134891187 instance=ExtResource("3_eb6dy")]
+position = Vector2(4174, 482)
+
+[node name="tree and pool" type="Node" parent="Map/MapHutan" unique_id=248800743]
+
+[node name="tree-single" parent="Map/MapHutan/tree and pool" unique_id=121278738 instance=ExtResource("4_trceg")]
+position = Vector2(1226, 1112)
+
+[node name="tree-single2" parent="Map/MapHutan/tree and pool" unique_id=395051893 instance=ExtResource("4_trceg")]
+position = Vector2(736, 1177)
+scale = Vector2(0.800001, 0.800001)
+
+[node name="pool" parent="Map/MapHutan/tree and pool" unique_id=656232865 instance=ExtResource("5_a8y0u")]
+position = Vector2(1007, 1329)
+
+[node name="tree and pool2" type="Node" parent="Map/MapHutan" unique_id=782214071]
+
+[node name="tree-single" parent="Map/MapHutan/tree and pool2" unique_id=108960686 instance=ExtResource("4_trceg")]
+position = Vector2(3407, 2432)
+
+[node name="tree-single2" parent="Map/MapHutan/tree and pool2" unique_id=1795089759 instance=ExtResource("4_trceg")]
+position = Vector2(2917, 2497)
+scale = Vector2(0.800001, 0.800001)
+
+[node name="pool" parent="Map/MapHutan/tree and pool2" unique_id=1959575281 instance=ExtResource("5_a8y0u")]
+position = Vector2(3192, 2651)
+
+[node name="ufo" type="StaticBody2D" parent="Map/MapHutan" unique_id=590384722]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/MapHutan/ufo" unique_id=1133149304]
+position = Vector2(-1326, -1057)
+shape = SubResource("CircleShape2D_85g3d")
+
+[node name="border" parent="Map/MapHutan" unique_id=407128119 instance=ExtResource("6_ya4ey")]
+
+[node name="EnergySpawner" parent="." unique_id=742458288 instance=ExtResource("23_y6deb")]
+position = Vector2(6650, 4218)
+spawn_interval = 1.5
+max_energy = 30
+
+[node name="Player" parent="." unique_id=2078378948 instance=ExtResource("2_0wfyh")]
+z_index = 30
+position = Vector2(1577, 2474)
+bullet_scene = ExtResource("23_chjal")
+
+[node name="EnemyHuman" parent="." unique_id=520596125 instance=ExtResource("3_sugp2")]
+z_index = 30
+position = Vector2(7195, 3804)
+speed = 40
+
+[node name="EnemyHuman2" parent="." unique_id=1009813409 instance=ExtResource("4_jyhfs")]
+z_index = 30
+position = Vector2(5279, 4273)
+
+[node name="EnemyAnimal" parent="." unique_id=636207033 instance=ExtResource("31_if84o")]
+position = Vector2(2349, 1157)
+
+[node name="Carrot" parent="." unique_id=2111374422 instance=ExtResource("29_yq6so")]
+z_index = 30
+position = Vector2(3798, 802)
+script = ExtResource("22_yq6so")
+
+[node name="To Pemukiman" parent="." unique_id=587482171 instance=ExtResource("11_ya4ey")]
+position = Vector2(1823, 2665)
+spawn_point_path = NodePath("SpawnPoint")
+
+[node name="SpawnPoint" type="Marker2D" parent="To Pemukiman" unique_id=1813025437]
+position = Vector2(4431, 153)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1686754413]
+position = Vector2(6563, 4378)
+navigation_polygon = SubResource("NavigationPolygon_jscy8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1984776359]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=152760869]
+offset_left = 11.0
+offset_top = 7.0
+offset_right = 77.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("26_2wyq8")
+theme_override_font_sizes/font_size = 25
+text = "heart"
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1404961710]
+z_index = 100
+custom_minimum_size = Vector2(16, 16)
+offset_left = 12.0
+offset_top = 38.0
+offset_right = 171.0
+offset_bottom = 62.0
+script = ExtResource("1_2wyq8")
+max_health = 5
+heart_texture = ExtResource("24_2wyq8")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1388525934]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.893
+anchor_right = 1.0
+anchor_bottom = 0.893
+offset_left = -119.0
+offset_top = -15.6641
+offset_right = -22.0
+offset_bottom = 15.3359
+theme_override_fonts/font = ExtResource("26_2wyq8")
+theme_override_font_sizes/font_size = 25
+text = "stamina"
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=556783372]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 602.0
+offset_right = 49.0
+offset_bottom = 642.0
+
+[node name="ProgressBar" type="TextureProgressBar" parent="CanvasLayer/Control" unique_id=1650365205]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 28.593
+anchor_top = 0.382
+anchor_right = 28.593
+anchor_bottom = 0.382
+offset_left = -229.72
+offset_top = -17.28
+offset_right = 373.28
+offset_bottom = 78.72
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.36, 0.36)
+texture_under = ExtResource("2_y6deb")
+texture_progress = ExtResource("3_og1vs")
+
+[node name="ControlTutorial" type="Control" parent="CanvasLayer" unique_id=414053826]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ControlTutorial" unique_id=1885593567]
+layout_mode = 0
+offset_left = 1523.0
+offset_top = 2264.0
+offset_right = 2523.0
+offset_bottom = 2464.0
+
+[node name="Label" type="Label" parent="CanvasLayer/ControlTutorial" unique_id=1501779936]
+layout_mode = 0
+offset_left = 1595.0
+offset_top = 2303.0
+offset_right = 2437.0
+offset_bottom = 2423.0
+theme_override_fonts/font = ExtResource("26_2wyq8")
+theme_override_font_sizes/font_size = 30
+text = "text"
+
+[node name="Control2" type="Control" parent="CanvasLayer" unique_id=465411881]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("31_c6pm6")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control2" unique_id=723023087]
+position = Vector2(574, 320)
+scale = Vector2(0.55525607, 0.55525607)
+texture = ExtResource("31_pibwh")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control2" unique_id=249229200]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 620.0
+offset_right = 150.0
+offset_bottom = 643.0
+theme_override_fonts/font = ExtResource("26_2wyq8")
+text = "Press M to see map"
+
+[node name="Tutorial" type="Node" parent="." unique_id=84767302]
+
+[node name="EnergyPickup" parent="Tutorial" unique_id=1917920087 instance=ExtResource("28_2f3dj")]
+position = Vector2(1166, 896)
+
+[node name="EnergyPickup2" parent="Tutorial" unique_id=1234577983 instance=ExtResource("28_2f3dj")]
+position = Vector2(1652, 1059)
+
+[node name="EnergyPickup3" parent="Tutorial" unique_id=729378374 instance=ExtResource("28_2f3dj")]
+position = Vector2(729, 1021)
+
+[node name="EnergyPickup4" parent="Tutorial" unique_id=906513775 instance=ExtResource("28_2f3dj")]
+position = Vector2(1541, 931)
+
+[node name="Elepant" parent="." unique_id=675213572 instance=ExtResource("30_fv21b")]
+position = Vector2(1019, 2495)
+
+[node name="EnemyAnimal2" parent="." unique_id=1600103487 instance=ExtResource("32_k4hdi")]
+z_index = 10
+position = Vector2(2219, 657)
+max_health = 4
+
+[node name="Mashdoom" parent="." unique_id=1815761454 instance=ExtResource("34_fuf3a")]
+z_index = 30
+position = Vector2(6453, 2888)
+
+[node name="elepant spawner" parent="." unique_id=2098384156 instance=ExtResource("35_j8jky")]
+position = Vector2(3071, 797)
+max_energy = 30
+
+[node name="elepant spawner7" parent="." unique_id=269751373 instance=ExtResource("35_j8jky")]
+position = Vector2(3365, 901)
+spawn_interval = 0.5
+max_energy = 40
+
+[node name="elepant spawner8" parent="." unique_id=123357152 instance=ExtResource("35_j8jky")]
+position = Vector2(3004, 1066)
+max_energy = 30
+
+[node name="elepant spawner2" parent="." unique_id=404914514 instance=ExtResource("35_j8jky")]
+position = Vector2(862, 2081)
+max_energy = 30
+
+[node name="elepant spawner5" parent="." unique_id=1449199956 instance=ExtResource("35_j8jky")]
+position = Vector2(710, 1942)
+max_energy = 40
+
+[node name="elepant spawner6" parent="." unique_id=2034798228 instance=ExtResource("35_j8jky")]
+position = Vector2(1051, 1984)
+spawn_interval = 0.5
+max_energy = 30
+
+[node name="elepant spawner3" parent="." unique_id=1833357027 instance=ExtResource("35_j8jky")]
+position = Vector2(2963, 650)
+spawn_interval = 0.5
+max_energy = 30
+
+[node name="elepant spawner4" parent="." unique_id=1844293780 instance=ExtResource("35_j8jky")]
+position = Vector2(3100, 1451)
+max_energy = 30
+
+[node name="Shape" type="Node" parent="." unique_id=2050886943]
+
+[node name="Item" parent="Shape" unique_id=943727536 instance=ExtResource("37_pibwh")]
+position = Vector2(5378, 3367)
+scale = Vector2(0.67999995, 0.67999995)
+
+[node name="Item2" parent="Shape" unique_id=1126041473 instance=ExtResource("37_pibwh")]
+position = Vector2(5734, 3452)
+scale = Vector2(0.67999995, 0.67999995)
+
+[node name="Item3" parent="Shape" unique_id=1522044177 instance=ExtResource("37_pibwh")]
+position = Vector2(6109.9995, 3446)
+scale = Vector2(0.67999995, 0.67999995)
+
+[node name="Item4" parent="Shape" unique_id=1504496940 instance=ExtResource("37_pibwh")]
+position = Vector2(5936, 3239.9998)
+scale = Vector2(0.67999995, 0.67999995)
+
+[node name="Pohon" parent="." unique_id=361298578 instance=ExtResource("37_fuf3a")]
+z_index = 40
+position = Vector2(6269, 3988)
+
+[connection signal="spawner_pemukiman" from="To Pemukiman" to="EnergySpawner" method="_on_to_pemukiman_spawner_pemukiman"]

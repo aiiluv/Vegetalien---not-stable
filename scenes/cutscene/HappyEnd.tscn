@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bb3yusqq0424n"]
+
+[ext_resource type="VideoStream" uid="uid://lcwvh7oys6ny" path="res://scenes/cutscene/Vegetalien-_-backstory(fix).ogv" id="1_divfh"]
+
+[node name="HappyEnd" type="Control" unique_id=766849625]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=577385445]
+texture_filter = 3
+layout_mode = 0
+offset_left = 71.0
+offset_top = 1.0
+offset_right = 1084.0
+offset_bottom = 637.0
+stream = ExtResource("1_divfh")
+expand = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1975150629]
+position = Vector2(575, 323)
+
+[node name="Button" type="Button" parent="." unique_id=1285962118]
+layout_mode = 0
+offset_left = 883.0
+offset_top = 567.0
+offset_right = 1053.0
+offset_bottom = 610.0
+text = "Skip button"

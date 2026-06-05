@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://2q2g5hgx4of1"]
+
+[ext_resource type="Texture2D" uid="uid://vpuqd4v0v12j" path="res://assets/map_forest/single-tree.svg" id="1_ppwlj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8d4lq"]
+radius = 66.0
+height = 182.0
+
+[node name="tree-single" type="StaticBody2D" unique_id=603665452]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=395941999]
+texture = ExtResource("1_ppwlj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404448184]
+position = Vector2(2, -1)
+shape = SubResource("CapsuleShape2D_8d4lq")

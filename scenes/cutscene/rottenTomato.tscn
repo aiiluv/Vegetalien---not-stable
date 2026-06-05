@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://3613yf71utir"]
+
+[ext_resource type="Script" uid="uid://b6mllpl0e2sl7" path="res://scenes/cutscene/rotten_tomato.gd" id="1_ptbvx"]
+[ext_resource type="VideoStream" uid="uid://doq8dj43c7uhb" path="res://scenes/cutscene/Vegetalien-_-sad.ogv" id="2_plcnj"]
+
+[node name="RottenTomato" type="Control" unique_id=594507512]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ptbvx")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1940890713]
+texture_filter = 3
+layout_mode = 0
+offset_left = 65.0
+offset_top = 5.0
+offset_right = 1080.0
+offset_bottom = 647.0
+stream = ExtResource("2_plcnj")
+expand = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=880668921]
+position = Vector2(577, 324)
+
+[node name="Button" type="Button" parent="." unique_id=1808990506]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 563.0
+offset_right = 1042.0
+offset_bottom = 606.0
+text = "Skip button"

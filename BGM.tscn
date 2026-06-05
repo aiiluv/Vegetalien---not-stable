@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cestfxwc5ikus"]
+
+[ext_resource type="AudioStream" uid="uid://m37ia3l33tbp" path="res://sound/veggiesBgm.mp3" id="1_f8x3a"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1542738381]
+stream = ExtResource("1_f8x3a")
+autoplay = true
+bus = &"GameBGM"

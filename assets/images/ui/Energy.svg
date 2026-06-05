@@ -1,0 +1,16 @@
+<svg width="51" height="102" viewBox="0 0 51 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i_248_43)">
+<path d="M0.362099 47.8488L33.255 0.858969C34.4386 -0.831855 37.0965 0.160291 36.8827 2.2131L32.7781 41.6172C32.7175 42.1989 32.9145 42.7779 33.3173 43.2019L50.2745 61.0516C51.0472 61.8649 50.9999 63.1544 50.1699 63.909L9.10583 101.24C7.50986 102.691 5.06436 100.936 5.92769 98.9595L20.5084 65.5773C20.898 64.6854 20.5889 63.6425 19.7763 63.1069L0.899935 50.6657C-0.040639 50.0457 -0.283902 48.7717 0.362099 47.8488Z" fill="#F6A103"/>
+</g>
+<defs>
+<filter id="filter0_i_248_43" x="0" y="0" width="50.8242" height="101.774" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-4" dy="4"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_248_43"/>
+</filter>
+</defs>
+</svg>

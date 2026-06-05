@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://boufomgogs4bx"]
+
+[ext_resource type="Texture2D" uid="uid://2xy4356nqied" path="res://assets/images/ui/menu screen.png" id="1_m1kxf"]
+[ext_resource type="Script" uid="uid://dee7qtju0mx1q" path="res://scenes/ui/main_menu.gd" id="1_uhagc"]
+[ext_resource type="FontFile" uid="uid://b3htss0jsfr0r" path="res://assets/fonts/Grow Year.otf" id="2_x2yvf"]
+[ext_resource type="StyleBox" uid="uid://173lyfo68u12" path="res://dialog/button.tres" id="3_m1kxf"]
+[ext_resource type="Texture2D" uid="uid://dgb46ds6rexhq" path="res://assets/images/ui/Logo.png" id="4_uhagc"]
+[ext_resource type="StyleBox" uid="uid://dhmsdojmu12nu" path="res://scenes/ui/button.tres" id="4_x2yvf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btxxm"]
+bg_color = Color(0.92941177, 0.7490196, 0.54901963, 1)
+shadow_color = Color(0.76862746, 0.6039216, 0.42352942, 1)
+shadow_size = 2
+shadow_offset = Vector2(10, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wb0q5"]
+
+[node name="MainMenu" type="Control" unique_id=884638742]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uhagc")
+
+[node name="MenuScreen" type="Sprite2D" parent="." unique_id=413264032]
+position = Vector2(576.00006, 326.5)
+scale = Vector2(0.798331, 0.69123936)
+texture = ExtResource("1_m1kxf")
+
+[node name="Panel2" type="Panel" parent="." unique_id=497260749]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 284.0
+offset_right = 212.0
+offset_bottom = 605.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_btxxm")
+
+[node name="Panel3" type="Panel" parent="." unique_id=741843591]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 280.0
+offset_right = 471.0
+offset_bottom = 601.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_btxxm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=397594234]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = -15.5
+offset_right = -136.0
+offset_bottom = 232.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="play_button" type="Button" parent="VBoxContainer" unique_id=1875930973]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5647059, 0.38431373, 0.3647059, 1)
+theme_override_fonts/font = ExtResource("2_x2yvf")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_m1kxf")
+theme_override_styles/pressed = ExtResource("4_x2yvf")
+theme_override_styles/hover = ExtResource("4_x2yvf")
+theme_override_styles/hover_pressed = ExtResource("4_x2yvf")
+text = "Play"
+expand_icon = true
+
+[node name="about_button" type="Button" parent="VBoxContainer" unique_id=2067245497]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5647059, 0.38431373, 0.3647059, 1)
+theme_override_fonts/font = ExtResource("2_x2yvf")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_m1kxf")
+theme_override_styles/pressed = ExtResource("4_x2yvf")
+theme_override_styles/hover = ExtResource("4_x2yvf")
+theme_override_styles/hover_pressed = ExtResource("4_x2yvf")
+text = "About"
+
+[node name="character_info_button" type="Button" parent="VBoxContainer" unique_id=1836613131]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5647059, 0.38431373, 0.3647059, 1)
+theme_override_fonts/font = ExtResource("2_x2yvf")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_m1kxf")
+theme_override_styles/pressed = ExtResource("4_x2yvf")
+theme_override_styles/hover = ExtResource("4_x2yvf")
+theme_override_styles/hover_pressed = ExtResource("4_x2yvf")
+text = "Character Info"
+
+[node name="Logos" type="Panel" parent="." unique_id=1471911067]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.055000003
+anchor_top = 0.28500003
+anchor_right = 0.055000003
+anchor_bottom = 0.28500003
+offset_left = -0.36000443
+offset_top = -72.68002
+offset_right = 566.64
+offset_bottom = 73.31998
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-74, -137)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wb0q5")
+
+[node name="Logo" type="Sprite2D" parent="Logos" unique_id=984520184]
+position = Vector2(305, 66)
+texture = ExtResource("4_uhagc")
+
+[connection signal="pressed" from="VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/about_button" to="." method="_on_about_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/character_info_button" to="." method="_on_character_info_button_pressed"]

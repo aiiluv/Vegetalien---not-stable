@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b2eqrhboscnrf"]
+
+[ext_resource type="Script" uid="uid://b370gm5g6mgwm" path="res://scenes/enemy_animal_2.gd" id="1_ejptv"]
+[ext_resource type="Texture2D" uid="uid://cb8joyauimg58" path="res://assets/images/enemy hare.png" id="2_qtuim"]
+[ext_resource type="Texture2D" uid="uid://bbf7rkfxrxsku" path="res://assets/images/ui/healthunder.svg" id="3_17g8w"]
+[ext_resource type="Texture2D" uid="uid://b8qsj5igepxwb" path="res://assets/images/ui/healthred.svg" id="4_g2ggr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pesp0"]
+radius = 52.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_evkhi"]
+radius = 55.03635
+
+[sub_resource type="Theme" id="Theme_vq13q"]
+
+[node name="EnemyAnimal2" type="CharacterBody2D" unique_id=2080730034]
+script = ExtResource("1_ejptv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=195493167]
+texture = ExtResource("2_qtuim")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1617185632]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_pesp0")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=629198259]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1054445004]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_evkhi")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=188161078]
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=748661207]
+offset_left = -56.0
+offset_top = -79.0
+offset_right = 469.0
+offset_bottom = 4.0
+scale = Vector2(0.20000035, 0.20000035)
+theme = SubResource("Theme_vq13q")
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("3_17g8w")
+texture_progress = ExtResource("4_g2ggr")
