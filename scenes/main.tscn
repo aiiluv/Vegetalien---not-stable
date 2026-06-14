@@ -504,7 +504,7 @@ max_energy = 30
 
 [node name="Player" parent="." unique_id=2078378948 instance=ExtResource("2_0wfyh")]
 z_index = 30
-position = Vector2(1577, 2474)
+position = Vector2(353, 478)
 bullet_scene = ExtResource("23_chjal")
 
 [node name="EnemyHuman" parent="." unique_id=520596125 instance=ExtResource("3_sugp2")]
@@ -713,15 +713,15 @@ position = Vector2(5378, 3367)
 scale = Vector2(0.67999995, 0.67999995)
 
 [node name="Item2" parent="Shape" unique_id=1126041473 instance=ExtResource("37_pibwh")]
-position = Vector2(5734, 3452)
+position = Vector2(8043, 3496)
 scale = Vector2(0.67999995, 0.67999995)
 
 [node name="Item3" parent="Shape" unique_id=1522044177 instance=ExtResource("37_pibwh")]
-position = Vector2(6109.9995, 3446)
+position = Vector2(7817, 4761)
 scale = Vector2(0.67999995, 0.67999995)
 
 [node name="Item4" parent="Shape" unique_id=1504496940 instance=ExtResource("37_pibwh")]
-position = Vector2(5936, 3239.9998)
+position = Vector2(4802, 5230)
 scale = Vector2(0.67999995, 0.67999995)
 
 [node name="Pohon" parent="." unique_id=361298578 instance=ExtResource("37_fuf3a")]

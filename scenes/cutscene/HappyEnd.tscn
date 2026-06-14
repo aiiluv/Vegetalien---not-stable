@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bb3yusqq0424n"]
 
-[ext_resource type="VideoStream" uid="uid://lcwvh7oys6ny" path="res://scenes/cutscene/Vegetalien-_-backstory(fix).ogv" id="1_divfh"]
+[ext_resource type="VideoStream" uid="uid://dv511h48xvw1u" path="res://scenes/cutscene/happy.ogv" id="1_divfh"]
+[ext_resource type="Script" uid="uid://cqstx5mplgdt" path="res://scenes/cutscene/happy_end.gd" id="1_oeflp"]
 
 [node name="HappyEnd" type="Control" unique_id=766849625]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_oeflp")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=577385445]
 texture_filter = 3

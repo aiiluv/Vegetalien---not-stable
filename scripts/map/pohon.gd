@@ -104,4 +104,4 @@ func _on_diamond_collected():
 # CUTSCENE FINAL
 # ==========================================================
 func play_cutscene():
-	get_tree().change_scene_to_file("res://scenes/cutscene/backstory.tscn") #ganti ke happy end nanti
+	get_tree().change_scene_to_file("res://scenes/cutscene/HappyEnd.tscn") #ganti ke happy end nanti
