@@ -14,16 +14,14 @@ var current_state = GameState.TUTORIAL
 @export var after_cutscene_timeline: String = "pemukiman_open"
 @export var tree_after_timeline: String = "tree_after_quest"
 
-# ===== COUNTER TUTORIAL =====
+#COUNTER TUTORIAL
 @export var required_tutorial_done: int = 2
 var tutorial_done_count: int = 0
 
-# ===== STATE =====
+#STATE
 var game_started := false
 
-# ==========================================================
-# 🔊 REFERENSI NODE AUDIO (Anak dari GameManager)
-# ==========================================================
+# REFERENSI NODE AUDIO (anak dari game manager)
 @onready var sfx_shoot = $SFX/Shoot
 @onready var sfx_hurt = $SFX/Hurt
 @onready var sfx_energy = $SFX/Energy
@@ -169,9 +167,7 @@ func _on_dialogic_signal(argument: Variant):
 		start_tree_quest()
 
 
-# ==========================================================
-# 🎧 FUNGSI UTAMA TOMBOL SFX (DIPANGGIL OLEH PLAYER)
-# ==========================================================
+# FUNGSI UTAMA TOMBOL SFX (dipanggil oleh player)
 func play_sfx_shoot():
 	if sfx_shoot: sfx_shoot.play()
 

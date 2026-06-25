@@ -14,12 +14,12 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.name == "Player":
 		player_near = true
-		$Label.visible = true   # 👈 MUNCUL
+		$Label.visible = true   #MUNCUL
 
 func _on_body_exited(body):
 	if body.name == "Player":
 		player_near = false
-		$Label.visible = false  # 👈 HILANG
+		$Label.visible = false  #HILANG
 
 func start_dialog():
 	Dialogic.start("mashdoom")

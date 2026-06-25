@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cqweitjobn7wo"]
 
 [ext_resource type="Script" uid="uid://r6rgll8b1dfx" path="res://scripts/enemy/elepant.gd" id="1_bfi7q"]
-[ext_resource type="Texture2D" uid="uid://dv2lnxebwu04q" path="res://assets/images/enemy elephant.svg" id="1_r6ib5"]
+[ext_resource type="Texture2D" uid="uid://b4tt85651tq4c" path="res://assets/images/enemy elephant.svg" id="1_r6ib5"]
 [ext_resource type="Texture2D" uid="uid://bbf7rkfxrxsku" path="res://assets/images/ui/healthunder.svg" id="3_s3ill"]
 [ext_resource type="Texture2D" uid="uid://b8qsj5igepxwb" path="res://assets/images/ui/healthred.svg" id="4_f2fnk"]
 

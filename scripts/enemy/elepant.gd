@@ -28,7 +28,7 @@ var cutscene_played: bool = false
 func _ready():
 	# Jika gajah sudah dikalahkan sebelumnya, langsung hapus dari scene
 	if EventBus and EventBus.elephant_defeated:
-		print("🐘 Elephant already defeated, removing from scene.")
+		print("Elephant already defeated, removing from scene.")
 		queue_free()
 		return
 
@@ -53,18 +53,13 @@ func _ready():
 	if dialogic and not dialogic.signal_event.is_connected(_on_dialog_signal):
 		dialogic.signal_event.connect(_on_dialog_signal)
 
-# ==========================================================
 # UPDATE HEALTH BAR
-# ==========================================================
 func update_health_bar():
 	if health_bar:
 		health_bar.max_value = max_health
 		health_bar.value = current_health
 
-
-# ==========================================================
 # SIGNAL DARI DIALOGIC UNTUK MEMULAI CHASING
-# ==========================================================
 func _on_dialog_signal(arg: String):
 	if arg == "start_enemy":
 		is_active = true
@@ -74,10 +69,7 @@ func _on_dialog_signal(arg: String):
 		if interact_area:
 			interact_area.queue_free()
 
-
-# ==========================================================
 # INTERACTION
-# ==========================================================
 func _process(delta):
 	if player_near and not is_active and Input.is_action_just_pressed("interact"):
 		start_dialog()
@@ -99,10 +91,7 @@ func _on_body_exited(body):
 		player_near = false
 		label.visible = false
 
-
-# ==========================================================
 # MOVEMENT & CHASING
-# ==========================================================
 func _physics_process(delta):
 	if not is_active or player == null or is_dead:
 		velocity = Vector2.ZERO
@@ -128,18 +117,12 @@ func _physics_process(delta):
 		Vector2.ZERO, knockback_friction * delta
 	)
 
-
-# ==========================================================
 # DAMAGE KE PLAYER
-# ==========================================================
 func _on_damage_area_body_entered(body):
 	if body.is_in_group("player") and body.has_method("take_damage"):
 		body.take_damage(global_position)
 
-
-# ==========================================================
 # DAMAGE DARI BULLET
-# ==========================================================
 func take_damage(from_position: Vector2, power: float):
 	if is_dead:
 		return
@@ -155,26 +138,19 @@ func take_damage(from_position: Vector2, power: float):
 		die()
 
 
-# ==========================================================
 # KNOCKBACK
-# ==========================================================
 func apply_knockback(from_position: Vector2, power: float):
 	var dir = (global_position - from_position).normalized()
 	knockback_velocity = dir * power
 
 
-# ==========================================================
 # VISUAL FEEDBACK
-# ==========================================================
 func flash_red():
 	sprite.modulate = Color(1, 0.2, 0.2)
 	await get_tree().create_timer(0.1).timeout
 	sprite.modulate = Color(1, 1, 1)
 
-
-# ==========================================================
 # ENEMY MATI + CUTSCENE
-# ==========================================================
 func die():
 	if is_dead:
 		return
@@ -182,7 +158,7 @@ func die():
 	is_dead = true
 	velocity = Vector2.ZERO
 
-	print("☠️ ELEPHANT MATI")
+	print("ELEPHANT MATI")
 
 	# Tandai bahwa gajah telah dikalahkan
 	if EventBus:
@@ -194,13 +170,11 @@ func die():
 	else:
 		queue_free()
 
-# ==========================================================
 # CUTSCENE SYSTEM (ADDED)
-# ==========================================================
 func start_cutscene():
 	is_active = false
 
-	print("🎬 START CUTSCENE")
+	print("START CUTSCENE")
 
 	# freeze player (kalau masih ada di scene ini)
 	var player_node = get_tree().get_first_node_in_group("player")
@@ -211,10 +185,7 @@ func start_cutscene():
 	await get_tree().create_timer(0.2).timeout
 	get_tree().change_scene_to_file("res://scenes/cutscene/RunTomato.tscn")
 
-
-# ==========================================================
 # CUTSCENE END → BACK TO GAMEPLAY
-# ==========================================================
 func _on_cutscene_end(arg: String):
 	if arg == "cutscene_end":
 		print("🎬 CUTSCENE SELESAI")

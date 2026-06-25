@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://co2iyd3a31xt3" path="res://assets/map_pemukiman/Rumah.svg" id="8_yc10j"]
 [ext_resource type="PackedScene" uid="uid://cvnd5o66dm4fk" path="res://scenes/ui/teleport/to_pemukiman.tscn" id="11_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://bkep6t43tlq3a" path="res://scenes/map/pemukiman.tscn" id="12_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://bi8od8q3p7qak" path="res://scenes/OTHER/human.tscn" id="21_txyw0"]
 [ext_resource type="Script" uid="uid://dh4ru2l8yw7fv" path="res://scripts/NPC/carrot.gd" id="22_yq6so"]
 [ext_resource type="PackedScene" uid="uid://kc2yv0wj8x8u" path="res://scenes/player/bullet.tscn" id="23_chjal"]
 [ext_resource type="PackedScene" uid="uid://cpewc8dnjdqcc" path="res://scenes/player/energy_spawner.tscn" id="23_y6deb"]
@@ -33,9 +34,11 @@
 [ext_resource type="FontFile" uid="uid://b3htss0jsfr0r" path="res://assets/fonts/Grow Year.otf" id="26_2wyq8"]
 [ext_resource type="Script" uid="uid://cyea1k5d7cgr6" path="res://scripts/GameManager.gd" id="27_vxglm"]
 [ext_resource type="PackedScene" uid="uid://dl8nu0nu4bk8k" path="res://scenes/player/EnergyPickup.tscn" id="28_2f3dj"]
+[ext_resource type="PackedScene" uid="uid://cjecfmh6v2ts1" path="res://scenes/OTHER/deer.tscn" id="29_cjqg0"]
 [ext_resource type="PackedScene" uid="uid://ban58m5ccn2xo" path="res://scenes/alien/carrot.tscn" id="29_yq6so"]
 [ext_resource type="PackedScene" uid="uid://cqweitjobn7wo" path="res://scenes/enemy/elepant.tscn" id="30_fv21b"]
-[ext_resource type="Script" uid="uid://xx1o4anum36k" path="res://scenes/ui/map.gd" id="31_c6pm6"]
+[ext_resource type="PackedScene" uid="uid://bp7d56ex1l6ua" path="res://scenes/OTHER/blood.tscn" id="30_vchkt"]
+[ext_resource type="Script" uid="uid://xx1o4anum36k" path="res://scripts/map/map.gd" id="31_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://b3h4ybu0ex873" path="res://scenes/enemy/enemy_animal.tscn" id="31_if84o"]
 [ext_resource type="Texture2D" uid="uid://b8qiavvof3p87" path="res://assets/images/Map.png" id="31_pibwh"]
 [ext_resource type="PackedScene" uid="uid://b2eqrhboscnrf" path="res://scenes/enemy_animal_2.tscn" id="32_k4hdi"]
@@ -497,6 +500,10 @@ shape = SubResource("CircleShape2D_85g3d")
 
 [node name="border" parent="Map/MapHutan" unique_id=407128119 instance=ExtResource("6_ya4ey")]
 
+[node name="human" parent="." unique_id=1735591156 instance=ExtResource("21_txyw0")]
+top_level = true
+position = Vector2(5938, 3828)
+
 [node name="EnergySpawner" parent="." unique_id=742458288 instance=ExtResource("23_y6deb")]
 position = Vector2(6650, 4218)
 spawn_interval = 1.5
@@ -509,12 +516,12 @@ bullet_scene = ExtResource("23_chjal")
 
 [node name="EnemyHuman" parent="." unique_id=520596125 instance=ExtResource("3_sugp2")]
 z_index = 30
-position = Vector2(7195, 3804)
+position = Vector2(7779, 3827)
 speed = 40
 
 [node name="EnemyHuman2" parent="." unique_id=1009813409 instance=ExtResource("4_jyhfs")]
 z_index = 30
-position = Vector2(5279, 4273)
+position = Vector2(4985, 4346)
 
 [node name="EnemyAnimal" parent="." unique_id=636207033 instance=ExtResource("31_if84o")]
 position = Vector2(2349, 1157)
@@ -523,6 +530,30 @@ position = Vector2(2349, 1157)
 z_index = 30
 position = Vector2(3798, 802)
 script = ExtResource("22_yq6so")
+
+[node name="Deer" parent="." unique_id=1660480689 instance=ExtResource("29_cjqg0")]
+top_level = true
+position = Vector2(2886, 1966)
+
+[node name="blood" parent="." unique_id=407159768 instance=ExtResource("30_vchkt")]
+top_level = true
+position = Vector2(2355, 2471)
+
+[node name="blood2" parent="." unique_id=1006517802 instance=ExtResource("30_vchkt")]
+top_level = true
+position = Vector2(1391, 1599)
+
+[node name="blood4" parent="." unique_id=1842319839 instance=ExtResource("30_vchkt")]
+top_level = true
+position = Vector2(7488, 4534)
+
+[node name="blood5" parent="." unique_id=786696572 instance=ExtResource("30_vchkt")]
+top_level = true
+position = Vector2(5742, 3540)
+
+[node name="blood3" parent="." unique_id=1105869971 instance=ExtResource("30_vchkt")]
+top_level = true
+position = Vector2(3537, 1188)
 
 [node name="To Pemukiman" parent="." unique_id=587482171 instance=ExtResource("11_ya4ey")]
 position = Vector2(1823, 2665)

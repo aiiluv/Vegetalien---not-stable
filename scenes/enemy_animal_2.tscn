@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2eqrhboscnrf"]
 
-[ext_resource type="Script" uid="uid://b370gm5g6mgwm" path="res://scenes/enemy_animal_2.gd" id="1_ejptv"]
-[ext_resource type="Texture2D" uid="uid://cb8joyauimg58" path="res://assets/images/enemy hare.png" id="2_qtuim"]
+[ext_resource type="Script" uid="uid://b370gm5g6mgwm" path="res://scripts/enemy/enemy_animal_2.gd" id="1_ejptv"]
+[ext_resource type="Texture2D" uid="uid://cdi0dgtp7e60r" path="res://assets/images/enemy hare.png" id="2_qtuim"]
 [ext_resource type="Texture2D" uid="uid://bbf7rkfxrxsku" path="res://assets/images/ui/healthunder.svg" id="3_17g8w"]
 [ext_resource type="Texture2D" uid="uid://b8qsj5igepxwb" path="res://assets/images/ui/healthred.svg" id="4_g2ggr"]
 

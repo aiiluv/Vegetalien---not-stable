@@ -8,7 +8,7 @@ Vegetalien is a survival game about aliens stranded on Earth who transform into 
 
 <p>
   <a href="https://savpixels.itch.io/vegetalien" target="_blank">
-    <img src="https://img.shields.io/badge/PLAY%20ON-ITCH.IO-fa5c5c?style=for-the-badge&logo=itch.io&logoColor=white" alt="Play on Itch.io">
+	<img src="https://img.shields.io/badge/PLAY%20ON-ITCH.IO-fa5c5c?style=for-the-badge&logo=itch.io&logoColor=white" alt="Play on Itch.io">
   </a>
 </p>
 

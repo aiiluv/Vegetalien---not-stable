@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3h4ybu0ex873"]
 
 [ext_resource type="Script" uid="uid://dx06m3fm2xuac" path="res://scenes/enemy/enemy_animal.gd" id="1_afss8"]
-[ext_resource type="Texture2D" uid="uid://bt2jhpu0m6bph" path="res://scenes/enemy hedgedog.png" id="1_ub682"]
+[ext_resource type="Texture2D" uid="uid://bt2jhpu0m6bph" path="res://assets/images/enemy hedgedog.png" id="1_ub682"]
 [ext_resource type="Texture2D" uid="uid://bbf7rkfxrxsku" path="res://assets/images/ui/healthunder.svg" id="3_vp2ca"]
 [ext_resource type="Texture2D" uid="uid://b8qsj5igepxwb" path="res://assets/images/ui/healthred.svg" id="4_iksma"]
 

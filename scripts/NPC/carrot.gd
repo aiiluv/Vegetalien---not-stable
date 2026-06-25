@@ -28,15 +28,11 @@ func _ready():
 	if Dialogic:
 		Dialogic.signal_event.connect(_on_dialog_signal)
 
-# ==========================================================
 # AKTIF SETELAH TUTORIAL
-# ==========================================================
 func _on_game_started():
 	can_interact = true
 
-# ==========================================================
 # INTERACT
-# ==========================================================
 func _process(delta):
 	if not can_interact:
 		return
@@ -44,9 +40,7 @@ func _process(delta):
 	if player_near and Input.is_action_just_pressed("interact"):
 		start_dialog()
 
-# ==========================================================
 # DIALOG
-# ==========================================================
 func start_dialog():
 	if Dialogic:
 		Dialogic.start("meet_carrot")
@@ -55,18 +49,14 @@ func _on_dialog_signal(arg: String):
 	if arg == "follow_carrot":
 		start_follow()
 
-# ==========================================================
 # START FOLLOW
-# ==========================================================
 func start_follow():
 	print("Carrot mulai jalan (tunggu player mode)")
 	is_moving = true
 	can_interact = false
 	$Label.visible = false
 
-# ==========================================================
 # MOVEMENT AI
-# ==========================================================
 func _physics_process(delta):
 	if not is_moving or target == null or player == null:
 		return
@@ -75,7 +65,7 @@ func _physics_process(delta):
 	var dist_to_player = global_position.distance_to(player.global_position)
 
 	if dist_to_player > wait_distance:
-		# 🔥 STOP (nunggu player)
+		#STOP (nunggu player)
 		velocity = Vector2.ZERO
 		move_and_slide()
 		print("Carrot nunggu player...")
@@ -97,13 +87,11 @@ func _physics_process(delta):
 		velocity = Vector2.ZERO
 		print("Carrot sampai di Elephant 🐘")
 
-		# 🔥 trigger dialog elephant
+		#trigger dialog elephant
 		if Dialogic:
 			Dialogic.start("elepant_intro")
 
-# ==========================================================
 # AREA DETECTION
-# ==========================================================
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_near = true

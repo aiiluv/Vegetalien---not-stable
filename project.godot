@@ -33,6 +33,7 @@ Bgm="*uid://cestfxwc5ikus"
 [dialogic]
 
 directories/dch_directory={
+"NPCinteract": "res://NPCinteract.dch",
 "carrot": "res://dialog/carrot.dch",
 "elepant": "res://dialog/elepant.dch",
 "mashdoom": "res://dialog/mashdoom.dch",

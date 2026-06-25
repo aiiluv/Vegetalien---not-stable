@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bp7d56ex1l6ua"]
+
+[ext_resource type="Texture2D" uid="uid://dadrmlnbans2y" path="res://assets/images/blood.png" id="1_j1xak"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4fd4r"]
+radius = 42.107006
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0tj8g"]
+radius = 77.16217
+
+[node name="blood" type="CharacterBody2D" unique_id=407159768]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1212336477]
+texture = ExtResource("1_j1xak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=281660563]
+position = Vector2(-2, -7)
+shape = SubResource("CircleShape2D_4fd4r")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2083216587]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=61165019]
+shape = SubResource("CircleShape2D_0tj8g")
+
+[node name="Label" type="Label" parent="." unique_id=1346486233]
+offset_left = -65.0
+offset_top = -98.0
+offset_right = 78.0
+offset_bottom = -75.0
+text = "Press E To Interact"
+metadata/_edit_use_anchors_ = true

@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://c6muc7o1cb438" path="res://assets/images/player/tomate2.svg" id="3_lvxji"]
 [ext_resource type="Texture2D" uid="uid://cgss6ru8u40v8" path="res://assets/images/player/idle.svg" id="3_p47bc"]
 [ext_resource type="Texture2D" uid="uid://qdd8j5jf473b" path="res://assets/images/player/tomate.svg" id="4_p47bc"]
+[ext_resource type="Texture2D" uid="uid://d4aoluhb1akty" path="res://assets/images/playerHurt/player_hurt (1).png" id="6_0owmy"]
+[ext_resource type="Texture2D" uid="uid://bfa7mdjdi3y31" path="res://assets/images/playerHurt/player_hurt (3).png" id="7_5gtgg"]
+[ext_resource type="Texture2D" uid="uid://8uehkfg67i41" path="res://assets/images/playerHurt/player_hurt (2).png" id="7_qek5x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_75vfm"]
 animations = [{
@@ -34,6 +37,34 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_5gtgg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0owmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5gtgg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0owmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qek5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0owmy")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_dovo2"]
 radius = 31.0
 
@@ -44,6 +75,14 @@ script = ExtResource("1_dovo2")
 position = Vector2(1.5, 0)
 sprite_frames = SubResource("SpriteFrames_75vfm")
 animation = &"walk"
+frame_progress = 0.19482127
+
+[node name="AnimatedRotten" type="AnimatedSprite2D" parent="." unique_id=1831079673]
+visible = false
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_5gtgg")
+animation = &"walk"
+frame_progress = 0.47327685
 
 [node name="ShootPoint" type="Marker2D" parent="." unique_id=1535092427]
 

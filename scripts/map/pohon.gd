@@ -6,7 +6,7 @@ var player_in_range := false
 var diamonds := 0
 var first_interaction_done := false
 var quest_finished := false
-var ready_to_finish := false # 🔥 NEW
+var ready_to_finish := false
 
 @onready var area: Area2D = $Area2D
 @onready var label: Label = $Label
@@ -20,14 +20,12 @@ func _ready():
 	if EventBus:
 		EventBus.diamonds_collected.connect(_on_diamond_collected)
 
-# ==========================================================
 # DETEKSI PLAYER
-# ==========================================================
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_range = true
 
-		# 🔥 UBAH TEXT SESUAI STATE
+		# UBAH TEXT SESUAI STATE
 		if ready_to_finish:
 			label.text = "Press E (Selesaikan)"
 		else:
@@ -40,16 +38,12 @@ func _on_body_exited(body):
 		player_in_range = false
 		label.visible = false
 
-# ==========================================================
 # INPUT
-# ==========================================================
 func _process(delta):
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		interact()
 
-# ==========================================================
-# INTERACT
-# ==========================================================
+#INTERACT
 func interact():
 	# 🔹 INTERAKSI AWAL
 	if not first_interaction_done:
@@ -71,9 +65,7 @@ func interact():
 
 	print("Belum bisa interaksi")
 
-# ==========================================================
 # DIALOG AWAL
-# ==========================================================
 func start_dialog():
 	if Dialogic:
 		Dialogic.start("tree_dialog")
@@ -84,9 +76,7 @@ func start_dialog():
 func _on_dialog_finished():
 	EventBus.emit_signal("spawn_enemy_tree")
 
-# ==========================================================
-# DIAMOND LOGIC
-# ==========================================================
+#DIAMOND LOGIC
 func _on_diamond_collected():
 	diamonds += 1
 	print("Diamond:", diamonds, "/", required_diamonds)
@@ -96,12 +86,10 @@ func _on_diamond_collected():
 
 		print("Diamond cukup → balik ke pohon")
 
-		# 🔥 Dialog hint (opsional)
+		#Dialog hint (opsional)
 		if Dialogic:
 			Dialogic.start("quest_pemukiman_selesai")
 
-# ==========================================================
 # CUTSCENE FINAL
-# ==========================================================
 func play_cutscene():
 	get_tree().change_scene_to_file("res://scenes/cutscene/HappyEnd.tscn") #ganti ke happy end nanti

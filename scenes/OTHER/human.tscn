@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bi8od8q3p7qak"]
+
+[ext_resource type="Texture2D" uid="uid://dcsa0jf0212gl" path="res://assets/images/human.png" id="1_51ecp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gig01"]
+radius = 32.0
+height = 208.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_51ecp"]
+radius = 130.0
+
+[node name="human" type="CharacterBody2D" unique_id=1735591156]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1283370752]
+position = Vector2(7.1525574e-06, 0.50000477)
+scale = Vector2(0.1851369, 0.18506223)
+texture = ExtResource("1_51ecp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=608772590]
+shape = SubResource("CapsuleShape2D_gig01")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1500655163]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1159400688]
+shape = SubResource("CircleShape2D_51ecp")
+
+[node name="Label" type="Label" parent="." unique_id=894582759]
+offset_left = -65.0
+offset_top = -140.0
+offset_right = 78.0
+offset_bottom = -117.0
+text = "Press E To Interact"
+metadata/_edit_use_anchors_ = true

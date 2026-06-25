@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var stun_duration := 0.3
 @export var health := 3
 
-# 🔥 BEDAIN ENEMY
+# BEDAIN ENEMY
 @export var enemy_type: String = "tree" # "tutorial" atau "tree"
 
 @onready var sprite: Sprite2D = $Sprite2D
@@ -29,7 +29,7 @@ func _ready():
 	if damage_area:
 		damage_area.body_entered.connect(_on_damage_area_body_entered)
 
-	# 🔥 CONNECT SESUAI TYPE
+	#CONNECT SESUAI TYPE
 	if EventBus:
 		if enemy_type == "tutorial":
 			EventBus.spawn_enemy_tutorial.connect(_on_spawn_tutorial)
@@ -37,15 +37,13 @@ func _ready():
 		elif enemy_type == "tree":
 			EventBus.spawn_enemy_tree.connect(_on_spawn_tree)
 
-	# ⛔ MATI DI AWAL
+	#MATI DI AWAL
 	set_physics_process(false)
 
 func find_player():
 	target = get_tree().get_first_node_in_group("player")
 
-# ==========================================================
-# AKTIVASI (FIX)
-# ==========================================================
+#AKTIVASI (FIX)
 func _on_spawn_tutorial():
 	if enemy_type == "tutorial":
 		activate_enemy()
@@ -59,9 +57,7 @@ func activate_enemy():
 	set_physics_process(true)
 	print("Enemy aktif:", enemy_type)
 
-# ==========================================================
-# PHYSICS
-# ==========================================================
+#PHYSICS
 func _physics_process(delta):
 	if is_dead:
 		return
@@ -94,9 +90,7 @@ func _physics_process(delta):
 		Vector2.ZERO, knockback_friction * delta
 	)
 
-# ==========================================================
-# DAMAGE
-# ==========================================================
+#DAMAGE
 func take_damage(from_position: Vector2, power: float):
 	if is_dead:
 		return
@@ -122,9 +116,7 @@ func _on_damage_area_body_entered(body):
 	if body.is_in_group("player") and body.has_method("take_damage"):
 		body.take_damage(global_position)
 
-# ==========================================================
-# EFFECT
-# ==========================================================
+#EFFECT
 func apply_knockback(from_position: Vector2, power: float):
 	var dir = (global_position - from_position).normalized()
 	knockback_velocity = dir * power * 1.5

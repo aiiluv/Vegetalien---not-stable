@@ -28,7 +28,19 @@ func _ready():
 	if stamina_bar:
 		stamina_bar.max_value = max_stamina
 		stamina_bar.value = current_stamina
-
+	
+	# ===== KONTROL PERUBAHAN SPRITE TOMAT =====
+	var normal_sprite = get_node_or_null("AnimatedSprite2D")
+	var rotten_sprite = get_node_or_null("AnimatedRotten")
+	
+	if EventBus.after_cutscene:
+		# Jika cutscene Elephant sudah selesai, pakai tomat busuk
+		if normal_sprite: normal_sprite.visible = false
+		if rotten_sprite: rotten_sprite.visible = true
+	else:
+		# Jika belum, pakai tomat segar normal
+		if normal_sprite: normal_sprite.visible = true
+		if rotten_sprite: rotten_sprite.visible = false
 
 func _physics_process(delta):
 	if is_dead:
@@ -69,14 +81,25 @@ func handle_movement(delta):
 
 
 func handle_animation():
-	var sprite = get_node_or_null("AnimatedSprite2D")
-	if sprite:
+	# Ambil referensi kedua sprite
+	var normal_sprite = get_node_or_null("AnimatedSprite2D")
+	var rotten_sprite = get_node_or_null("AnimatedRotten")
+	
+	# Tentukan sprite mana yang aktif saat ini
+	var active_sprite : AnimatedSprite2D = null
+	if normal_sprite and normal_sprite.visible:
+		active_sprite = normal_sprite
+	elif rotten_sprite and rotten_sprite.visible:
+		active_sprite = rotten_sprite
+
+	# Jalankan animasi pada sprite yang aktif
+	if active_sprite:
 		if velocity.x != 0:
-			sprite.flip_h = velocity.x < 0
+			active_sprite.flip_h = velocity.x < 0
 		if velocity.length() > 10:
-			sprite.play("walk")
+			active_sprite.play("walk")
 		else:
-			sprite.play("idle")
+			active_sprite.play("idle")
 
 
 func handle_shooting():
@@ -150,6 +173,16 @@ func take_damage(from_position: Vector2, power: float = 400.0):
 		return
 	await get_tree().create_timer(0.5).timeout
 	is_invincible = false
+	
+	# Cari sprite mana yang sedang dipakai untuk diberi efek merah
+	var normal_sprite = get_node_or_null("AnimatedSprite2D")
+	var rotten_sprite = get_node_or_null("AnimatedRotten")
+	var active_sprite = normal_sprite if (normal_sprite and normal_sprite.visible) else rotten_sprite
+
+	if active_sprite:
+		active_sprite.modulate = Color(1, 0.2, 0.2)
+		await get_tree().create_timer(0.1).timeout
+		active_sprite.modulate = Color(1, 1, 1)
 
 
 func die():

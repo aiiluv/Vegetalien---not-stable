@@ -20,7 +20,7 @@ layout_mode = 0
 offset_left = 71.0
 offset_top = 1.0
 offset_right = 1084.0
-offset_bottom = 637.0
+offset_bottom = 647.0
 stream = ExtResource("2_doxpf")
 expand = true
 
@@ -29,10 +29,10 @@ position = Vector2(573, 323)
 
 [node name="Button" type="Button" parent="." unique_id=1101873585]
 layout_mode = 0
-offset_left = 961.0
-offset_top = 590.0
-offset_right = 1131.0
-offset_bottom = 633.0
+offset_left = 862.0
+offset_top = 565.0
+offset_right = 1032.0
+offset_bottom = 608.0
 text = "Skip button"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

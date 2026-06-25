@@ -14,9 +14,7 @@ func _on_body_entered(body):
 		if body.has_method("add_stamina"):
 			body.add_stamina(stamina_amount)
 
-		# ==========================================================
-		# 🔊 PANGGIL SFX ENERGI DI SINI (SUDAH DI DALAM FUNGSI)
-		# ==========================================================
+		#PANGGIL SFX ENERGI DI SINI (SUDAH DI DALAM FUNGSI)
 		var game_manager = get_tree().current_scene.get_node_or_null("GameManager")
 		if game_manager and game_manager.has_method("play_sfx_energy"):
 			game_manager.play_sfx_energy()
