@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ban58m5ccn2xo"]
+[gd_scene format=3 uid="uid://ban58m5ccn2xo"]
 
-[ext_resource type="Texture2D" uid="uid://dcabo70k7u8ln" path="res://assets/images/carrot.svg" id="1_lu62m"]
+[ext_resource type="Texture2D" uid="uid://byn1kdlx63wq3" path="res://assets/images/carrot.svg" id="1_lu62m"]
+[ext_resource type="Texture2D" uid="uid://bmjdyvct66fkn" path="res://assets/images/rottenCarrot.png" id="2_3twt4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3twt4"]
 radius = 49.0
@@ -9,24 +10,28 @@ height = 146.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_xj4iq"]
 radius = 157.537
 
-[node name="Carrot" type="CharacterBody2D"]
+[node name="Carrot" type="CharacterBody2D" unique_id=1489196370]
 z_index = 20
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=869456567]
 position = Vector2(5.96046e-08, 2.38419e-07)
 scale = Vector2(0.56383, 0.56383)
 texture = ExtResource("1_lu62m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="rotten" type="Sprite2D" parent="." unique_id=495235625]
+visible = false
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("2_3twt4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=485501039]
 shape = SubResource("CapsuleShape2D_3twt4")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1948135264]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1570613687]
 shape = SubResource("CircleShape2D_xj4iq")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=462298586]
 offset_left = -65.0
 offset_top = -98.0
 offset_right = 78.0

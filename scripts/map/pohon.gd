@@ -27,7 +27,7 @@ func _on_body_entered(body):
 
 		# UBAH TEXT SESUAI STATE
 		if ready_to_finish:
-			label.text = "Press E (Selesaikan)"
+			label.text = "Press E"
 		else:
 			label.text = "Press E"
 

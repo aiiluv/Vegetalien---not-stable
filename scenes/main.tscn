@@ -186,7 +186,7 @@ scale = Vector2(0.0642937, 0.0642937)
 texture = ExtResource("3_0ld40")
 
 [node name="Sprite2D16" type="Sprite2D" parent="Map/Blank" unique_id=1636933105]
-position = Vector2(104.216, 99.9202)
+position = Vector2(105.02066, 99.638794)
 scale = Vector2(0.0642937, 0.0642937)
 texture = ExtResource("3_0ld40")
 
@@ -524,6 +524,7 @@ z_index = 30
 position = Vector2(4985, 4346)
 
 [node name="EnemyAnimal" parent="." unique_id=636207033 instance=ExtResource("31_if84o")]
+unique_name_in_owner = true
 position = Vector2(2349, 1157)
 
 [node name="Carrot" parent="." unique_id=2111374422 instance=ExtResource("29_yq6so")]
@@ -694,6 +695,7 @@ position = Vector2(1541, 931)
 position = Vector2(1019, 2495)
 
 [node name="EnemyAnimal2" parent="." unique_id=1600103487 instance=ExtResource("32_k4hdi")]
+unique_name_in_owner = true
 z_index = 10
 position = Vector2(2219, 657)
 max_health = 4

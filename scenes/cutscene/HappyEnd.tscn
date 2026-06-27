@@ -20,11 +20,3 @@ expand = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1975150629]
 position = Vector2(575, 323)
-
-[node name="Button" type="Button" parent="." unique_id=1285962118]
-layout_mode = 0
-offset_left = 883.0
-offset_top = 567.0
-offset_right = 1053.0
-offset_bottom = 610.0
-text = "Skip button"
